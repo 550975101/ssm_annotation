@@ -13,4 +13,6 @@ public interface UserMapper {
    */
   User getUserById(String id);
 
+
+  int saveUser(User user);
 }

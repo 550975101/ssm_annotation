@@ -6,7 +6,12 @@
     <select id="getUserById" parameterType="string" resultType="org.example.domain.User">
         select *
         from `user`
-        where id= 1
+        where id = 1
     </select>
+
+    <insert id="saveUser" parameterType="org.example.domain.User">
+        insert into `user` (name, role_id)
+        values (#{name,jdbcType=VARCHAR}, #{role_id,jdbcType=INTEGER})
+    </insert>
 
 </mapper>
